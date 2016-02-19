@@ -1,4 +1,4 @@
-define rsnapshot::node::master_definition($location_name, $sshpubkey, $user) {
+define rsnapshot::node::master_definition($location_name, $sshpubkey, $user = 'root') {
 
   if ($sshpubkey !~ /^(ssh-...) ([^ ]*)/) {
     err("Can't parse key from root@$name")
